@@ -1,5 +1,5 @@
 //
-//  UIWebsiteURLField.m
+//  UIPlaceholderSuffixField.m
 //  admin
 //
 //  Created by Sam Baumgarten on 1/1/13.
@@ -26,7 +26,15 @@
     
     // Set colour and font size of placeholder text
     [[UIColor colorWithRed:197.0/255.0 green:197.0/255.0 blue:197.0/255.0 alpha:1.0] setFill];
-    CGFloat x =  [[self text] sizeWithFont:[self font]].width;
+    
+    CGFloat x;
+    if ([self textAlignment] == UITextAlignmentCenter) {
+        CGFloat textFieldWidth = [self frame].size.width;
+        CGFloat textWidth = [[self text] sizeWithFont:[self font]].width;
+        x = (textFieldWidth/2)+(textWidth/2);
+    } else {
+        x = [[self text] sizeWithFont:[self font]].width;
+    }
     [[self placeholder] drawInRect:CGRectMake(x, 14, 282, 47) withFont:[UIFont systemFontOfSize:14]];
 }
 
