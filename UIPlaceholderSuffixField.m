@@ -27,7 +27,7 @@
     // Set colour and font size of placeholder text
     [[UIColor colorWithRed:197.0/255.0 green:197.0/255.0 blue:197.0/255.0 alpha:1.0] setFill];
     CGFloat x =  [[self text] sizeWithFont:[self font]].width;
-    [[self placeholder] drawInRect:CGRectMake(x, 13, 282, 47) withFont:[UIFont systemFontOfSize:14]];
+    [[self placeholder] drawInRect:CGRectMake(x, 14, 282, 47) withFont:[UIFont systemFontOfSize:14]];
 }
 
 @end
