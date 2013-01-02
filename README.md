@@ -10,6 +10,7 @@ UIPlaceholderSuffixField is a subclass of UITextField which makes it easy to hav
 * In the Editing Changed IBAction put this code: ```[schoolURLField setNeedsDisplay];```
 * You're all done!
 # Licence
+
 ******
 This code is distributed under the terms and conditions of the zlib license.
 
